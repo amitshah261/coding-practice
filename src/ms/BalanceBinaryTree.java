@@ -1,28 +1,10 @@
+package ms;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
-/*
-    Given a tree of order n which is neither complete or a  search tree, write a function to construct a new tree of order
-    m in-place. Memory usage is bound to 2 times the size of the tree. The new tree must be complete, and a node A cannot
-    be a child of another node B in the new tree if A was an ancestor of B in the old tree.
- */
-
-class TreeNode{
-    int data;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int data){
-        this.data = data;
-    }
-
-    @Override
-    public String toString(){
-        return String.valueOf(data);
-    }
-}
 public class BalanceBinaryTree {
-    TreeNode balanceTree(TreeNode root){
+    private TreeNode balanceTree(TreeNode root) {
         TreeNode rootOther = new TreeNode(root.data);
         Queue<TreeNode> originalTree = new LinkedList<>();
         Queue<TreeNode> duplicateTree = new LinkedList<>();
@@ -64,7 +46,7 @@ public class BalanceBinaryTree {
         return rootOther;
     }
 
-    void printInOrder(TreeNode root){
+    private void printInOrder(TreeNode root) {
         if(root == null){
             return;
         }
