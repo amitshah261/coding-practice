@@ -18,4 +18,9 @@ class TreeNode {
     public String toString() {
         return String.valueOf(data);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.data == ((TreeNode)obj).data;
+    }
 }
