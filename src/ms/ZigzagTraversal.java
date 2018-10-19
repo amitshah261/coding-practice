@@ -1,5 +1,8 @@
 package ms;
 
+import utils.TreeNode;
+import utils.TreeUtils;
+
 import java.util.*;
 
 /*
@@ -35,15 +38,6 @@ public class ZigzagTraversal {
         return result;
     }
 
-    private void printInOrder(TreeNode root) {
-        if(root == null){
-            return;
-        }
-        printInOrder(root.left);
-        System.out.print(" " + root);
-        printInOrder(root.right);
-    }
-
     public static void main(String[] args) {
         ZigzagTraversal zt = new ZigzagTraversal();
         TreeNode root = new TreeNode(1);
@@ -55,8 +49,8 @@ public class ZigzagTraversal {
         root.right.right = new TreeNode(5);
         root.right.right.right = new TreeNode(6);
         System.out.println("Original Tree: ");
-        zt.printInOrder(root);
-        System.out.println("\nZigzag traversal: ");
+        TreeUtils.printInOrder(root);
+        System.out.println("Zigzag traversal: ");
         System.out.println(zt.zigzagTraversal(root));
     }
 }

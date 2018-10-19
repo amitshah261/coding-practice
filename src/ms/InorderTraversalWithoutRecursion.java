@@ -1,5 +1,8 @@
 package ms;
 
+import utils.TreeNode;
+import utils.TreeUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -32,15 +35,6 @@ public class InorderTraversalWithoutRecursion {
         return sb.toString();
     }
 
-    private void printInOrder(TreeNode root) {
-        if(root == null){
-            return;
-        }
-        printInOrder(root.left);
-        System.out.print(root + " ");
-        printInOrder(root.right);
-    }
-
     public static void main(String[] args) {
         InorderTraversalWithoutRecursion it = new InorderTraversalWithoutRecursion();
         TreeNode root = new TreeNode(1);
@@ -51,8 +45,8 @@ public class InorderTraversalWithoutRecursion {
         root.right.right = new TreeNode(5);
         root.right.right.right = new TreeNode(6);
         System.out.println("Original Tree: ");
-        it.printInOrder(root);
-        System.out.println("\nInorder without recursion: ");
+        TreeUtils.printInOrder(root);
+        System.out.println("Inorder without recursion: ");
         System.out.println(it.inorderTraversalWithoutRecursion(root));
     }
 }

@@ -1,5 +1,7 @@
 package ms;
 
+import utils.LinkedNode;
+
 /*
     Given the head of a linked list, write a program in your language of choice to return the middle node of the list.
 */

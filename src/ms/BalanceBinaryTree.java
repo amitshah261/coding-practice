@@ -1,5 +1,8 @@
 package ms;
 
+import utils.TreeNode;
+import utils.TreeUtils;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -46,15 +49,6 @@ public class BalanceBinaryTree {
         return rootOther;
     }
 
-    private void printInOrder(TreeNode root) {
-        if(root == null){
-            return;
-        }
-        printInOrder(root.left);
-        System.out.print(" " + root);
-        printInOrder(root.right);
-    }
-
     public static void main(String[] args) {
         BalanceBinaryTree bt = new BalanceBinaryTree();
         TreeNode root = new TreeNode(1);
@@ -65,8 +59,8 @@ public class BalanceBinaryTree {
         root.right.right = new TreeNode(5);
         root.right.right.right = new TreeNode(6);
         System.out.println("Original Tree: ");
-        bt.printInOrder(root);
-        System.out.println("\nUpdated Tree: ");
-        bt.printInOrder(bt.balanceTree(root));
+        TreeUtils.printInOrder(root);
+        System.out.println("Updated Tree: ");
+        TreeUtils.printInOrder(bt.balanceTree(root));
     }
 }

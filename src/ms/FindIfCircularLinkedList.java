@@ -1,5 +1,7 @@
 package ms;
 
+import utils.LinkedNode;
+
 public class FindIfCircularLinkedList {
 
     boolean findIfLinkedListHasCycle(LinkedNode node){

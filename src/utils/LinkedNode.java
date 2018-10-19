@@ -1,10 +1,11 @@
-package ms;
+package utils;
 
-class LinkedNode {
+public class LinkedNode {
     private int data;
-    LinkedNode next;
+    public LinkedNode next;
+    public LinkedNode prev;
 
-    LinkedNode(int data) {
+    public LinkedNode(int data) {
         this.data = data;
     }
 
